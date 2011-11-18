@@ -1,0 +1,5 @@
+/* Localized versions of Info.plist keys */
+
+CFBundleName = "FullBacano";
+CFBundleShortVersionString ="1.0";
+CFBundleGetInfoString ="FullBacano 1.0 Creative Commons cc 2011 __AudioSlaves__";
