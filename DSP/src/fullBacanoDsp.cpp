@@ -23,7 +23,7 @@ void FullBacanoDSP::setLevel(float level){
 	 }
 }
 
-void FullBacanoDSP::setDist(float distortion){
+void FullBacanoDSP::setDistortion(float distortion){
 	 // distortion must be between 0 and 100
 	 if(distortion > 100.0){
 			// TODO: throw error
@@ -39,28 +39,30 @@ void FullBacanoDSP::setDist(float distortion){
 }
 
 void FullBacanoDSP::process(unsigned int nSamples, float *inBuf, float *outBuf){
-	 for(unsigned int i=0; i<nSamples; i++){
-			if(&inBuf < THRESHOLD)             
-				 &outBuf = &inBuf * 2;
+  for (unsigned int i=0; i<nSamples; i++){
+    if (*inBuf < THRESHOLD) {             
+      *outBuf = *inBuf * 2;
+    }
 
-			if(&inBuf > THRESHOLD){
-				 &outBuf = pow(3 * (2 - &inBuf), 2);
-				 // &outBuf *= BacanizedSample;   
-				 // &outBuf = (3-BacanizedSampleoutBuf)/3;   
-			}
+    if (*inBuf > THRESHOLD) {
+      *outBuf = pow(3 * (2 - *inBuf), 2);
+      // *outBuf *= BacanizedSample;   
+      // *outBuf = (3-BacanizedSampleoutBuf)/3;   
+    }
 
-			// if(inputSample<(-1*Threshold)) BacanizedSample*=-1;
+    // if(inputSample<(-1*Threshold)) BacanizedSample*=-1;
 
-			// if(inputSample>2*Threshold)            
-			// {
-			//    if(inputSample>0) BacanizedSample=1;
-			//    if(inputSample<0) BacanizedSample=-1;
-			// }
-			// BacanizedSample=BacanizedSample*BacaneriaDepth;
-			// outputSample=inputSample+BacanizedSample;
+    // if(inputSample>2*Threshold)            
+    // {
+    //    if(inputSample>0) BacanizedSample=1;
+    //    if(inputSample<0) BacanizedSample=-1;
+    // }
+    // BacanizedSample=BacanizedSample*BacaneriaDepth;
+    // outputSample=inputSample+BacanizedSample;
 
-			// outputSample=outputSample*gain;
-			// *destP = outputSample;
-			// destP += inNumChannels;
-			// sourceP += inNumChannels;
+    // outputSample=outputSample*gain;
+    // *destP = outputSample;
+    // destP += inNumChannels;
+    // sourceP += inNumChannels;
 	 }
+}
