@@ -1,0 +1,8 @@
+# vim
+*.swp
+
+# Xcode user data
+*.xcuserdatad/
+
+# Mac OS metadata
+.DS_Store
