@@ -52,7 +52,7 @@
 
 //~~~~~~~~~~~~~~  Change!!! ~~~~~~~~~~~~~~~~~~~~~//
 #define FullBacano_COMP_SUBTYPE		'fbcn'
-#define FullBacano_COMP_MANF			'Aslv'
+#define FullBacano_COMP_MANF		'Aslv'
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 #endif

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67AD3B9E149ED10A0087F837 /* AUDebugDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 67AD3B9A149ED10A0087F837 /* AUDebugDispatcher.cpp */; };
+		67AD3B9F149ED10A0087F837 /* AUDebugDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 67AD3B9B149ED10A0087F837 /* AUDebugDispatcher.h */; };
+		67AD3BA0149ED10A0087F837 /* AUPlugInDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 67AD3B9C149ED10A0087F837 /* AUPlugInDispatch.cpp */; };
+		67AD3BA1149ED10A0087F837 /* AUPlugInDispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 67AD3B9D149ED10A0087F837 /* AUPlugInDispatch.h */; };
 		FA27FBA1145EFA1600EC244E /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA27FBA0145EFA1600EC244E /* CoreServices.framework */; };
 		FA27FBA3145EFA1600EC244E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA27FBA2145EFA1600EC244E /* AudioToolbox.framework */; };
 		FA27FBA5145EFA1600EC244E /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA27FBA4145EFA1600EC244E /* AudioUnit.framework */; };
@@ -43,8 +47,6 @@
 		FA27FBFD145EFA1600EC244E /* AUBaseHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = FA27FBFC145EFA1600EC244E /* AUBaseHelper.h */; };
 		FA27FBFF145EFA1600EC244E /* AUBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA27FBFE145EFA1600EC244E /* AUBuffer.cpp */; };
 		FA27FC01145EFA1600EC244E /* AUBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = FA27FC00145EFA1600EC244E /* AUBuffer.h */; };
-		FA27FC03145EFA1600EC244E /* AUDebugDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA27FC02145EFA1600EC244E /* AUDebugDispatcher.cpp */; };
-		FA27FC05145EFA1600EC244E /* AUDebugDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = FA27FC04145EFA1600EC244E /* AUDebugDispatcher.h */; };
 		FA27FC07145EFA1600EC244E /* AUInputFormatConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = FA27FC06145EFA1600EC244E /* AUInputFormatConverter.h */; };
 		FA27FC09145EFA1600EC244E /* AUSilentTimeout.h in Headers */ = {isa = PBXBuildFile; fileRef = FA27FC08145EFA1600EC244E /* AUSilentTimeout.h */; };
 		FA27FC0B145EFA1600EC244E /* AUTimestampGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = FA27FC0A145EFA1600EC244E /* AUTimestampGenerator.h */; };
@@ -53,6 +55,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		67AD3B9A149ED10A0087F837 /* AUDebugDispatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AUDebugDispatcher.cpp; path = FullBacano/AUPublic/AUDebugDispatcher.cpp; sourceTree = SOURCE_ROOT; };
+		67AD3B9B149ED10A0087F837 /* AUDebugDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AUDebugDispatcher.h; path = FullBacano/AUPublic/AUDebugDispatcher.h; sourceTree = SOURCE_ROOT; };
+		67AD3B9C149ED10A0087F837 /* AUPlugInDispatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AUPlugInDispatch.cpp; path = FullBacano/AUPublic/AUPlugInDispatch.cpp; sourceTree = SOURCE_ROOT; };
+		67AD3B9D149ED10A0087F837 /* AUPlugInDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AUPlugInDispatch.h; path = FullBacano/AUPublic/AUPlugInDispatch.h; sourceTree = SOURCE_ROOT; };
 		FA27FB9D145EFA1600EC244E /* FullBacano.component */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FullBacano.component; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA27FBA0145EFA1600EC244E /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		FA27FBA2145EFA1600EC244E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -97,8 +103,6 @@
 		FA27FBFC145EFA1600EC244E /* AUBaseHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AUBaseHelper.h; path = Extras/CoreAudio/AudioUnits/AUPublic/Utility/AUBaseHelper.h; sourceTree = DEVELOPER_DIR; };
 		FA27FBFE145EFA1600EC244E /* AUBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AUBuffer.cpp; path = Extras/CoreAudio/AudioUnits/AUPublic/Utility/AUBuffer.cpp; sourceTree = DEVELOPER_DIR; };
 		FA27FC00145EFA1600EC244E /* AUBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AUBuffer.h; path = Extras/CoreAudio/AudioUnits/AUPublic/Utility/AUBuffer.h; sourceTree = DEVELOPER_DIR; };
-		FA27FC02145EFA1600EC244E /* AUDebugDispatcher.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AUDebugDispatcher.cpp; path = Extras/CoreAudio/AudioUnits/AUPublic/Utility/AUDebugDispatcher.cpp; sourceTree = DEVELOPER_DIR; };
-		FA27FC04145EFA1600EC244E /* AUDebugDispatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AUDebugDispatcher.h; path = Extras/CoreAudio/AudioUnits/AUPublic/Utility/AUDebugDispatcher.h; sourceTree = DEVELOPER_DIR; };
 		FA27FC06145EFA1600EC244E /* AUInputFormatConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AUInputFormatConverter.h; path = Extras/CoreAudio/AudioUnits/AUPublic/Utility/AUInputFormatConverter.h; sourceTree = DEVELOPER_DIR; };
 		FA27FC08145EFA1600EC244E /* AUSilentTimeout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AUSilentTimeout.h; path = Extras/CoreAudio/AudioUnits/AUPublic/Utility/AUSilentTimeout.h; sourceTree = DEVELOPER_DIR; };
 		FA27FC0A145EFA1600EC244E /* AUTimestampGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AUTimestampGenerator.h; path = Extras/CoreAudio/AudioUnits/AUPublic/Utility/AUTimestampGenerator.h; sourceTree = DEVELOPER_DIR; };
@@ -110,7 +114,6 @@
 		FA27FC16145EFA1700EC244E /* FullBacanoCocoaView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FullBacanoCocoaView.m; sourceTree = "<group>"; };
 		FA27FC19145EFA1700EC244E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FullBacanoCocoaView.xib; sourceTree = "<group>"; };
 		FA27FC1B145EFA1700EC244E /* FullBacanoCocoaViewFactory-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FullBacanoCocoaViewFactory-Info.plist"; sourceTree = "<group>"; };
-		FA64E1171475E06B00DB95F0 /* libfullbacano.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfullbacano.a; path = ../DSP/bin/libfullbacano.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +134,6 @@
 		FA27FB90145EFA1500EC244E = {
 			isa = PBXGroup;
 			children = (
-				FA64E1171475E06B00DB95F0 /* libfullbacano.a */,
 				FA27FBB9145EFA1600EC244E /* FullBacano */,
 				FA27FB9F145EFA1600EC244E /* Frameworks */,
 				FA27FB9E145EFA1600EC244E /* Products */,
@@ -201,6 +203,10 @@
 		FA27FBCA145EFA1600EC244E /* AUPublic */ = {
 			isa = PBXGroup;
 			children = (
+				67AD3B9A149ED10A0087F837 /* AUDebugDispatcher.cpp */,
+				67AD3B9B149ED10A0087F837 /* AUDebugDispatcher.h */,
+				67AD3B9C149ED10A0087F837 /* AUPlugInDispatch.cpp */,
+				67AD3B9D149ED10A0087F837 /* AUPlugInDispatch.h */,
 				FA27FBCB145EFA1600EC244E /* CAAUParameter.cpp */,
 				FA27FBCD145EFA1600EC244E /* CAAUParameter.h */,
 				FA27FBCF145EFA1600EC244E /* CAAudioChannelLayout.cpp */,
@@ -229,8 +235,6 @@
 				FA27FBFC145EFA1600EC244E /* AUBaseHelper.h */,
 				FA27FBFE145EFA1600EC244E /* AUBuffer.cpp */,
 				FA27FC00145EFA1600EC244E /* AUBuffer.h */,
-				FA27FC02145EFA1600EC244E /* AUDebugDispatcher.cpp */,
-				FA27FC04145EFA1600EC244E /* AUDebugDispatcher.h */,
 				FA27FC06145EFA1600EC244E /* AUInputFormatConverter.h */,
 				FA27FC08145EFA1600EC244E /* AUSilentTimeout.h */,
 				FA27FC0A145EFA1600EC244E /* AUTimestampGenerator.h */,
@@ -263,11 +267,12 @@
 				FA27FBF9145EFA1600EC244E /* ComponentBase.h in Headers */,
 				FA27FBFD145EFA1600EC244E /* AUBaseHelper.h in Headers */,
 				FA27FC01145EFA1600EC244E /* AUBuffer.h in Headers */,
-				FA27FC05145EFA1600EC244E /* AUDebugDispatcher.h in Headers */,
 				FA27FC07145EFA1600EC244E /* AUInputFormatConverter.h in Headers */,
 				FA27FC09145EFA1600EC244E /* AUSilentTimeout.h in Headers */,
 				FA27FC0B145EFA1600EC244E /* AUTimestampGenerator.h in Headers */,
 				FA27FC0F145EFA1600EC244E /* AUEffectBase.h in Headers */,
+				67AD3B9F149ED10A0087F837 /* AUDebugDispatcher.h in Headers */,
+				67AD3BA1149ED10A0087F837 /* AUPlugInDispatch.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +303,9 @@
 /* Begin PBXProject section */
 		FA27FB92145EFA1500EC244E /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = FA27FB95145EFA1600EC244E /* Build configuration list for PBXProject "FullBacano" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -356,8 +364,9 @@
 				FA27FBF7145EFA1600EC244E /* ComponentBase.cpp in Sources */,
 				FA27FBFB145EFA1600EC244E /* AUBaseHelper.cpp in Sources */,
 				FA27FBFF145EFA1600EC244E /* AUBuffer.cpp in Sources */,
-				FA27FC03145EFA1600EC244E /* AUDebugDispatcher.cpp in Sources */,
 				FA27FC0D145EFA1600EC244E /* AUEffectBase.cpp in Sources */,
+				67AD3B9E149ED10A0087F837 /* AUDebugDispatcher.cpp in Sources */,
+				67AD3BA0149ED10A0087F837 /* AUPlugInDispatch.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,12 +400,12 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -406,7 +415,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;

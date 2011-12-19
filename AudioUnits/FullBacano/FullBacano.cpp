@@ -48,7 +48,11 @@
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-COMPONENT_ENTRY(FullBacano)
+#if __MAC_OS_X_VERSION_MAX_ALLOWED >= 1070
+    AUDIOCOMPONENT_ENTRY(AUBaseFactory, FullBacano)
+#else
+    COMPONENT_ENTRY(FullBacano)
+#endif
 
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

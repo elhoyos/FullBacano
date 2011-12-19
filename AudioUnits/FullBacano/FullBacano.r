@@ -55,7 +55,7 @@
 
 #define VERSION			kFullBacanoVersion
 #define NAME			"AudioSlaves: FullBacano"
-#define DESCRIPTION		"FullBacano 1.0"
+#define DESCRIPTION		"AudioSlaves' DSP AU Plugin"
 #define ENTRY_POINT		"FullBacanoEntry"
 
 #include "AUResources.r"

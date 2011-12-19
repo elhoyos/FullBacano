@@ -26,5 +26,24 @@
 	<true/>
 	<key>NSHumanReadableCopyright</key>
 	<string>FullBacano 1.0 Creative Commons cc 2011 __AudioSlaves__</string>
+	<key>AudioComponents</key>
+	<array>
+		<dict>
+			<key>description</key>
+			<string>AudioSlaves&apos; DSP AU Plugin</string>
+			<key>factoryFunction</key>
+			<string>FullBacanoFactory</string>
+			<key>manufacturer</key>
+			<string>AudioSlaves</string>
+			<key>name</key>
+			<string>AudioSlaves: FullBacano</string>
+			<key>subtype</key>
+			<string>Pass</string>
+			<key>type</key>
+			<string>aufx</string>
+			<key>version</key>
+			<string>65536</string>
+		</dict>
+	</array>
 </dict>
 </plist>
