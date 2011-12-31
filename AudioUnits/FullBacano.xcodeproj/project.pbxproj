@@ -110,7 +110,6 @@
 		FA27FC16145EFA1700EC244E /* FullBacanoCocoaView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FullBacanoCocoaView.m; sourceTree = "<group>"; };
 		FA27FC19145EFA1700EC244E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FullBacanoCocoaView.xib; sourceTree = "<group>"; };
 		FA27FC1B145EFA1700EC244E /* FullBacanoCocoaViewFactory-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FullBacanoCocoaViewFactory-Info.plist"; sourceTree = "<group>"; };
-		FA64E1171475E06B00DB95F0 /* libfullbacano.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfullbacano.a; path = ../DSP/bin/libfullbacano.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +130,6 @@
 		FA27FB90145EFA1500EC244E = {
 			isa = PBXGroup;
 			children = (
-				FA64E1171475E06B00DB95F0 /* libfullbacano.a */,
 				FA27FBB9145EFA1600EC244E /* FullBacano */,
 				FA27FB9F145EFA1600EC244E /* Frameworks */,
 				FA27FB9E145EFA1600EC244E /* Products */,

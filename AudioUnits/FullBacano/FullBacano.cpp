@@ -43,9 +43,11 @@
 	FullBacano.cpp
 	
 =============================================================================*/
+//#import <Foundation/Foundation.h>
 #include "FullBacano.h"
 #include "math.h"
-
+#include <iostream>
+#include <fstream>
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 COMPONENT_ENTRY(FullBacano)
@@ -55,6 +57,13 @@ COMPONENT_ENTRY(FullBacano)
 //	FullBacano::FullBacano
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 FullBacano::FullBacano (AudioUnit component) : AUEffectBase (component) {
+  /*  ofstream logFile;
+    logFile.open ("debugLog.raw");
+    logFile << "Writing this to a file.\n";
+    logFile.close();
+    */
+    
+    
     
     CreateElements ();
     Globals () -> UseIndexedParameters (kNumberOfParameters);
@@ -392,12 +401,13 @@ void		FullBacano::FullBacanoKernel::Process(	const Float32 	*inSourceP,
 	const Float32 *sourceP = inSourceP;
 	Float32 *destP = inDestP;
 	Float32 outputSample, distortedSample;
-    Float32 Threshold=1/3;
+        Float32 Threshold=0.333330000000000;//333333333333;
     Float32 gain = (GetParameter( kParameter_Ganancia )/100);
 	Float32 BacaneriaDepth= (GetParameter( kParameter_Bacaneria)/100);
 	while (nSampleFrames-- > 0) {
     Float32 inputSample = *sourceP;
-		
+        distortedSample=0;  
+		//NSLog("Distorted sample %i",23);
 		//The current (version 2) AudioUnit specification *requires* 
 	    //non-interleaved format for all inputs and outputs. Therefore inNumChannels is always 1
 		
@@ -406,7 +416,7 @@ void		FullBacano::FullBacanoKernel::Process(	const Float32 	*inSourceP,
 
 			// here's where you do your DSP work
       
-/*        if(inputSample<Threshold)             
+      /* if(inputSample<Threshold)             
             distortedSample = inputSample * 2;
 		
         if(inputSample>Threshold)            
@@ -423,34 +433,29 @@ void		FullBacano::FullBacanoKernel::Process(	const Float32 	*inSourceP,
             if(inputSample>0) distortedSample=1;
             if(inputSample<0) distortedSample=-1;
             }
- */                   
+        */            
    
-         if(abs(inputSample)<Threshold)             
-         distortedSample = inputSample * 2;
+         if(fabs(inputSample)<Threshold)             
+         distortedSample = 2*inputSample ;
          
-         if(abs(inputSample)>=Threshold)            
+         if(fabs(inputSample)>=Threshold)            
          {
              if(inputSample>0)
              { 
-              
-           
-            distortedSample=(3-(powf((2-distortedSample*3),2)))/3;
-            //printf(distortedSample);    
+                 if(fabs(inputSample)>2*Threshold) distortedSample=1;
+                 else distortedSample=(3-(powf((2-inputSample*3),2)))/3;
+                
              }
             if(inputSample<0)
              {
-            distortedSample=-(3-(powf((2-distortedSample*3),2)))/3;
-                 
+                 if(fabs(inputSample)>2*Threshold) distortedSample=-1;
+                else distortedSample=-(3-(powf((2-inputSample*3),2)))/3;
              }
          }
          
          
-        if(abs(inputSample)>2*Threshold)            
-         {
-         if(inputSample>0) distortedSample=1;
-         if(inputSample<0) distortedSample=-1;
-         }
-                           
+                   
+                                   
         
         
         
@@ -463,8 +468,7 @@ void		FullBacano::FullBacanoKernel::Process(	const Float32 	*inSourceP,
         outputSample=inputSample+distortedSample;
         
         outputSample=outputSample*gain;
-        outputSample=distortedSample;
-        *destP = outputSample;
+          *destP = outputSample;
 		destP += inNumChannels;
         sourceP += inNumChannels;
         }

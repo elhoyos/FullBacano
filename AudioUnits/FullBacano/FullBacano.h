@@ -85,7 +85,7 @@ static const int kDefaultValue_FullBacano_LaMondaEnElVolco = kQuesoSpeaker_FullB
 // menu item names for the LaMondaEnElVolco parameter
 static CFStringRef kMenuItem_FullBacano_Queso     = CFSTR ("Quesito de la cojta");
 static CFStringRef kMenuItem_FullBacano_Zipo       = CFSTR ("Zipote Parlante");         // 7
-static CFStringRef kMenuItem_FullBacano_Troque     = CFSTR ("Dolble Troque");     
+static CFStringRef kMenuItem_FullBacano_Troque     = CFSTR ("Doble Troque");     
 static CFStringRef kMenuItem_FullBacano_Eerda     = CFSTR ("Eeeeerda");   // 8
 
 // parameter identifiers
@@ -196,8 +196,11 @@ public:
 		
         virtual void		Reset();
 		
-		//private: //state variables...
-	};
+		private: //state variables...
+	
+        //ofstream *logFile;
+        
+    };
 };
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
