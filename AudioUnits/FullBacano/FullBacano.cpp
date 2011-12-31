@@ -413,6 +413,7 @@ void		FullBacano::FullBacanoKernel::Process(	const Float32 	*inSourceP,
 									// we're only processing one of an arbitrary number of interleaved channels
 
 			// here's where you do your DSP work
+        //SOFT CLIPPING ALGORITHM DAFX zozler pg 139 adaptado de matlab
       
               
    if(fabs(inputSample)<Threshold)             
@@ -429,10 +430,12 @@ void		FullBacano::FullBacanoKernel::Process(	const Float32 	*inSourceP,
             if(inputSample<0)
              {
                  if(fabs(inputSample)>2*Threshold) distortedSample=-1;
-                else distortedSample=-(3-(powf((2-inputSample*3),2)))/3;
+                else distortedSample=-(3-(powf((2-fabs(inputSample)*3),2)))/3;
              }
          }
-         
+        
+        
+       // controles en Fullbacano  
         distortedSample=distortedSample*BacaneriaDepth;
         outputSample=inputSample+distortedSample;
         
