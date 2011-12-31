@@ -406,9 +406,7 @@ void		FullBacano::FullBacanoKernel::Process(	const Float32 	*inSourceP,
 	Float32 BacaneriaDepth= (GetParameter( kParameter_Bacaneria)/100);
 	while (nSampleFrames-- > 0) {
     Float32 inputSample = *sourceP;
-        distortedSample=0;  
-		//NSLog("Distorted sample %i",23);
-		//The current (version 2) AudioUnit specification *requires* 
+        //The current (version 2) AudioUnit specification *requires* 
 	    //non-interleaved format for all inputs and outputs. Therefore inNumChannels is always 1
 		
 		//sourceP += inNumChannels;	// advance to next frame (e.g. if stereo, we're advancing 2 samples);
@@ -416,26 +414,8 @@ void		FullBacano::FullBacanoKernel::Process(	const Float32 	*inSourceP,
 
 			// here's where you do your DSP work
       
-      /* if(inputSample<Threshold)             
-            distortedSample = inputSample * 2;
-		
-        if(inputSample>Threshold)            
-            {
-            distortedSample=(2-inputSample)*3;
-            distortedSample*=distortedSample;   
-            distortedSample=(3-distortedSample)/3;   
-            }
-        
-        if(inputSample<(-1*Threshold)) distortedSample*=-1;
-
-        if(inputSample>2*Threshold)            
-            {
-            if(inputSample>0) distortedSample=1;
-            if(inputSample<0) distortedSample=-1;
-            }
-        */            
-   
-         if(fabs(inputSample)<Threshold)             
+              
+   if(fabs(inputSample)<Threshold)             
          distortedSample = 2*inputSample ;
          
          if(fabs(inputSample)>=Threshold)            
@@ -453,17 +433,6 @@ void		FullBacano::FullBacanoKernel::Process(	const Float32 	*inSourceP,
              }
          }
          
-         
-                   
-                                   
-        
-        
-        
-        
-        
-        
-        
-        
         distortedSample=distortedSample*BacaneriaDepth;
         outputSample=inputSample+distortedSample;
         
